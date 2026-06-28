@@ -1,0 +1,176 @@
+{
+  "info": {
+    "_postman_id": "aa7ff6a6-bf46-4f22-baa3-889c9ab58c72",
+    "name": "assignment 11",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "25064023",
+    "_collection_link": "https://go.postman.co/collection/25064023-aa7ff6a6-bf46-4f22-baa3-889c9ab58c72?source=collection_link"
+  },
+  "item": [
+    {
+      "name": "login",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"fullName\": \"mohamed\",\n  \"email\": \"b7f6194371@emailinbo.live\",\n  \"password\": \"123456789\",\n  \"profileImage\":\"http://localhost:3000/uploads/1781794596497-f.png\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/register?=",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "register"
+          ],
+          "query": [
+            {
+              "key": "",
+              "value": ""
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "signup",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"fullName\": \"mohamed\",\n  \"email\": \"b7f6194371@emailinbo.live\",\n  \"password\": \"123456789\",\n  \"profileImage\":\"http://localhost:3000/uploads/1781794596497-f.png\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/users/signup",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "users",
+            "signup"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "verifyotp",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"email\":\"b7f6194371@emailinbo.live\",\n    \"otp\":\"941080\"\n}",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/users/verify-otp",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "users",
+            "verify-otp"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "image",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "fullName",
+              "value": "mohamed",
+              "type": "text",
+              "uuid": "560a679b-aef4-409f-808a-bcbf3961da46",
+              "disabled": true
+            },
+            {
+              "key": "email\n",
+              "value": "moh@gmail.com",
+              "type": "text",
+              "uuid": "8ec60348-2266-4cdb-839e-bbd15a3115b9",
+              "disabled": true
+            },
+            {
+              "key": "password",
+              "value": "123456789",
+              "type": "text",
+              "uuid": "0c2a812d-07ae-4b66-8e17-7cfaa53a01e9",
+              "disabled": true
+            },
+            {
+              "key": "profileImage",
+              "type": "file",
+              "uuid": "8ccfca46-f17b-4612-98a1-1f72132b7873",
+              "src": "/Users/mohamedwalid/Downloads/صور/WhatsApp Image 2026-06-02 at 23.56.48.jpeg"
+            }
+          ]
+        },
+        "url": {
+          "raw": "{{baseUrl}}/api/users/upload-image",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "api",
+            "users",
+            "upload-image"
+          ]
+        }
+      },
+      "response": []
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "type": "text/javascript",
+        "packages": {},
+        "requests": {},
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ],
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": ""
+    }
+  ]
+}
